@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Will it Rain Tomorrow?</h1>
+<form action="/result" method="POST">
+    <input type="text" name="city" placeholder="Enter your city" required>
+    <button type="submit">Check</button>
+</form>
+
+<% if (error) { %>
+    <p class="error"><%= error %></p>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
